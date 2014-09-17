@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 class QueueNotifier(SingletonPlugin):
     
     implements(IConfigurable)
-    implements(IDomainObjectModification)
+    implements(IDomainObjectModification, inherit=True)
     
     @property
     def publisher(self):
